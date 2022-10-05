@@ -9,7 +9,7 @@ public class MiController {
     @GetMapping("/{id}")
     public String saludar(@PathVariable("id")int grupo){
         if(grupo>5){
-            return "No hay a quien saludar";
+            return "<h1>No hay a quien saludar</h1> Busca a quien saludar";
         }
         else {
             return "<h1>Hola " + grupo + "</h1>";
