@@ -1,5 +1,7 @@
 package com.example.reto3.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -14,6 +16,10 @@ public class Client implements Serializable {
     private String password;
     private String name;
     private Integer age;
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
+    @JsonIgnoreProperties({"client","lib"})
     private List<Message> messages;
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
+    @JsonIgnoreProperties("client")
     private List<Reservation> reservations;
 }
