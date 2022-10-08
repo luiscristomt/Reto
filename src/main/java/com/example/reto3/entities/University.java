@@ -1,4 +1,4 @@
-package com.example.reto3.entidades;
+package com.example.reto3.entities;
 
 import javax.persistence.*;
 import java.util.List;

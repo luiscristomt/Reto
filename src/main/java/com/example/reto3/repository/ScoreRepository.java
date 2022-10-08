@@ -1,11 +1,12 @@
 package com.example.reto3.repository;
 
-import com.example.reto3.entidades.Score;
+import com.example.reto3.entities.Score;
 import com.example.reto3.repository.CRUDRepository.ScoreCRUDRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class ScoreRepository {
@@ -16,5 +17,8 @@ public class ScoreRepository {
     }
     public Score save(Score s){
         return scoreCRUDRepository.save(s);
+    }
+    public Optional<Score> getById(int id){
+        return scoreCRUDRepository.findById(id);
     }
 }

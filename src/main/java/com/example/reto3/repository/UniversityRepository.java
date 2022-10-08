@@ -1,6 +1,6 @@
 package com.example.reto3.repository;
 
-import com.example.reto3.entidades.University;
+import com.example.reto3.entities.University;
 import com.example.reto3.repository.CRUDRepository.UniversityCRUDRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

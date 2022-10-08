@@ -1,6 +1,6 @@
 package com.example.reto3.services;
 
-import com.example.reto3.entidades.Student;
+import com.example.reto3.entities.Student;
 import com.example.reto3.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
