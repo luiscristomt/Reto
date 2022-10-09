@@ -1,6 +1,6 @@
 package com.example.reto3.controller;
 
-import com.example.reto3.entidades.University;
+import com.example.reto3.entities.University;
 import com.example.reto3.services.UniversityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

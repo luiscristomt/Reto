@@ -1,6 +1,6 @@
 package com.example.reto3.repository.CRUDRepository;
 
-import com.example.reto3.entidades.Message;
+import com.example.reto3.entities.Message;
 import org.springframework.data.repository.CrudRepository;
 
 public interface MessageCRUDRepository extends CrudRepository<Message, Integer> {

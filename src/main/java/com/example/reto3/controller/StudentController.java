@@ -1,6 +1,6 @@
 package com.example.reto3.controller;
 
-import com.example.reto3.entidades.Student;
+import com.example.reto3.entities.Student;
 import com.example.reto3.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ import java.util.List;
 public class StudentController {
     @Autowired
     private StudentService studentService;
-    @GetMapping("all")
+    @GetMapping("/all")
     public List<Student> getAll(){
         return studentService.getAll();
     }
