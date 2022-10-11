@@ -29,6 +29,9 @@ public class ScoreService {
             }
         }
     }
+    public Optional<Score> getById(int id){
+        return scoreRepository.getById(id);
+    }
     public Score update(Score s){
         if(s.getIdScore()!= null){
             Optional<Score> st= scoreRepository.getById(s.getIdScore());

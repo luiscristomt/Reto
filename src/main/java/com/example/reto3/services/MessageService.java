@@ -29,6 +29,9 @@ public class MessageService {
             }
         }
     }
+    public Optional<Message> getById(int id){
+        return messageRepository.getById(id);
+    }
     public Message update(Message m){
         if(m.getIdMessage()!= null){
             Optional<Message> st= messageRepository.getById(m.getIdMessage());

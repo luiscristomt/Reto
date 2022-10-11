@@ -1,6 +1,7 @@
 package com.example.reto3.services;
 
 import com.example.reto3.entities.Category;
+import com.example.reto3.entities.Client;
 import com.example.reto3.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,9 @@ public class CategoryService {
              }
          }
      }
+    public Optional<Category> getById(int id){
+        return categoryRepository.getById(id);
+    }
      public Category update(Category c){
          if(c.getIdCategory()!=null){
              Optional<Category> st= categoryRepository.getById(c.getIdCategory());

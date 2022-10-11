@@ -29,6 +29,9 @@ public class ReservationService {
             }
         }
     }
+    public Optional<Reservation> getById(int id){
+        return reservationRepository.getById(id);
+    }
     public Reservation update(Reservation r){
         if(r.getIdReservation()!= null){
             Optional<Reservation> st= reservationRepository.getById(r.getIdReservation());

@@ -30,6 +30,9 @@ public class LibraryService {
             }
         }
     }
+    public Optional<Library> getById(int id){
+        return libraryRepository.getById(id);
+    }
     public Library update(Library l){
         if(l.getIdLibrary()!= null){
             Optional<Library> st= libraryRepository.getById(l.getIdLibrary());
