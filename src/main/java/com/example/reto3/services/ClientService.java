@@ -29,6 +29,9 @@ public class ClientService {
             }
         }
     }
+    public Optional<Client> getById(int id){
+        return clientRepository.getById(id);
+    }
     public Client update(Client c){
         if(c.getIdClient()!= null){
             Optional<Client> st= clientRepository.getById(c.getIdClient());
