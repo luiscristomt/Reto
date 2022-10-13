@@ -21,4 +21,7 @@ public class ReservationRepository {
     public Optional<Reservation> getById(int id){
         return reservationCRUDRepository.findById(id);
     }
+    public Reservation update(Reservation r){return reservationCRUDRepository.save(r);}
+    /*public Reservation delete(Reservation r){return reservationCRUDRepository.delete(r);}
+    public Optional<Reservation> deleteById(int id){return reservationCRUDRepository.deleteById(id);}*/
 }

@@ -21,4 +21,9 @@ public class CategoryRepository {
     public Optional<Category> getById(int id){
         return categoryCRUDRepository.findById(id);
     }
+    public Category update(Category c) {return categoryCRUDRepository.save(c); }
+    /*public Category delete(Category c){
+        return categoryCRUDRepository.delete(c);
+    }
+    public Optional<Category> deleteById(int id){return categoryCRUDRepository.deleteById(id);}*/
 }

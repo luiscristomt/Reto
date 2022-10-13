@@ -1,6 +1,7 @@
 package com.example.reto3.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,12 +17,15 @@ public class Library implements Serializable {
     private String target;
     private Integer capacity;
     private String description;
+    @ManyToOne
+    @JoinColumn(name="idCategory")
+    @JsonIgnoreProperties("libs")
     private Category category;
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "lib")
     @JsonIgnoreProperties({"clien","lib"})
     private List<Message> messages;
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "lib")
-    @JsonIgnoreProperties({"client","lib"})
+    @JsonIgnoreProperties({"message","lib"})
     private List<Reservation> reservations;
 
     public Integer getIdLibrary() {
