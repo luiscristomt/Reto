@@ -21,4 +21,7 @@ public class ScoreRepository {
     public Optional<Score> getById(int id){
         return scoreCRUDRepository.findById(id);
     }
+    public Score update(Score s){return scoreCRUDRepository.save(s);}
+    /*public Score delete(Score s){return scoreCRUDRepository.delete(s);}
+    public Optional<Score> deleteById(int id){return scoreCRUDRepository.deleteById(id);}*/
 }

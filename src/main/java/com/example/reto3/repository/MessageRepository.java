@@ -21,4 +21,7 @@ public class MessageRepository {
     public Optional<Message> getById(int id){
         return messageCRUDRepository.findById(id);
     }
+    public Message update(Message m){return messageCRUDRepository.save(m);}
+    /*public Message delete(Message m){return messageCRUDRepository.delete(m);}
+    public Optional<Message> deleteById(int id){return messageCRUDRepository.deleteById(id);}*/
 }

@@ -1,5 +1,7 @@
 package com.example.reto3.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -10,6 +12,8 @@ public class Score implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idScore;
     private Integer score;
+    @OneToOne
+    @JsonIgnoreProperties("score")
     private Reservation reservation;
 
     public Integer getIdScore() {

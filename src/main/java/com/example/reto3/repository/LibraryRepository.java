@@ -22,4 +22,7 @@ public class LibraryRepository {
     public Optional<Library> getById(int id){
         return libraryCRUDRepository.findById(id);
     }
+    public Library update(Library l){return libraryCRUDRepository.save(l);}
+    /*public Library delete(Library l){return libraryCRUDRepository.delete(l);}
+    public Optional<Library> deleteById(int id){return libraryCRUDRepository.deleteById(id);}*/
 }

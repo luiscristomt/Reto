@@ -22,4 +22,7 @@ public class ClientRepository {
     public Optional<Client> getById(int id){
         return clientCRUDRepository.findById(id);
     }
+    public Client update(Client c){return clientCRUDRepository.save(c);}
+    /*public Client delete(Client c){return clientCRUDRepository.delete(c);}
+    public Optional<Client> deleteById(int id){return clientCRUDRepository.deleteById(id);}*/
 }
